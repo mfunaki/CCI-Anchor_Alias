@@ -1,5 +1,9 @@
 version: 2.1
 
+defaults: &defaults
+  docker:
+    - image: cimg/base:2021.07
+
 workflows:
   my_workflow:
     jobs:
@@ -11,5 +15,9 @@ jobs:
       - image: cimg/base:2021.07
     steps:
       - checkout
-      - run: |
-          echo "Hello, World!"
+      - run: echo "Hello, World!"
+  hello_asia:
+    <<: *defaults
+    steps:
+      - checkout
+      - run: echo "Hello, Asia!"
