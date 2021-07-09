@@ -8,6 +8,7 @@ workflows:
   my_workflow:
     jobs:
       - hello_world
+      - hello_asia
 
 jobs:
   hello_world:
