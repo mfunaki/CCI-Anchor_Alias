@@ -9,6 +9,7 @@ workflows:
     jobs:
       - hello_world
       - hello_asia
+      - hello_japan
 
 jobs:
   hello_world:
@@ -22,3 +23,8 @@ jobs:
     steps:
       - checkout
       - run: echo "Hello, Asia!"
+  hello_japan:
+    <<: *defaults
+    steps:
+      - checkout
+      - run: echo "Hello, Japan!"
