@@ -1,0 +1,15 @@
+version: 2.1
+
+workflows:
+  my_workflow:
+    jobs:
+      - hello_world
+
+jobs:
+  hello_world:
+    docker:
+      - image: cimg/base:2021.07
+    steps:
+      - checkout
+      - run: |
+          echo "Hello, World!"
